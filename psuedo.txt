@@ -1,0 +1,9 @@
+Ok so the idea of my project is to create a checkers game using HTML, CSS, and JAVASCRIPT.
+the idea is to use html to allow myself to have specific elements to work with so that i can affect them using css (for styling) and javascript (for interaction)
+I iintend to create an 8 X 8 checker board with 12 red pieces and 12 black pieces that interactively move around the board in accordance with checkers rule sets.
+I beleive the most effective way to go about this is to creat a 2d array that is affected and dynamically changes according to where the pieces are located on the board.
+for instance if i move a piece from a1 to a2 the code willbe able to verify the position of the piece and communicate that the piece has moved positions.
+using this process i am hoping to allow a way to show the available moves a player has when the piece moves to a particular square.
+this would include if the piece is able to "capture" an opponents piece.
+I also intend to allow for a piece to be classified as a "king"  once a piece reaches the oppenents side of the board. upon reaching "king" status
+the effect of that piece would be given additional movement sets such as moving backwards and the ability to make multiple jumps to capture multiple pieces if the opportunity is allowed.
