@@ -1,14 +1,43 @@
-body{
-    background-color: grey;
-}
-
-#container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
 }
 
 #board {
-    display: flex;
-    
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    margin: 20px auto;
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+}
+
+.square {
+    width: 50px;
+    height: 50px;
+}
+
+.dark {
+    background-color: brown;
+}
+
+.light {
+    background-color: beige;
+}
+
+.piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.red {
+    background-color: red;
+}
+
+.black {
+    background-color: black;
 }
