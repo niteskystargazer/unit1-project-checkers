@@ -41,3 +41,12 @@ body {
 .black {
     background-color: black;
 }
+
+.selected {
+    outline: 2px solid white;
+}
+
+.king {
+    background-size: cover;
+    border: 2px solid gold;
+}
