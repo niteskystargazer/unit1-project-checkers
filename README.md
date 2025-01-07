@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Bradley Motsinger</h1>
-<h3 align="center">A passionate frontend developer from India</h3>
+<h3 align="center">A passionate fullstack developer in training!</h3>
 
 - 🔭 I’m currently working on [Checkers In Browser Game](https://niteskystargazer.github.io/unit1-project-checkers/)
 
