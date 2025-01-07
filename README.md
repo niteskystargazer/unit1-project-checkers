@@ -2,7 +2,7 @@
 <h1 align="center">PLAY THE GAME BY CLICKING THE IMAGE ABOVE!</h1>
 <h2 align="center">Created by Bradley Motsinger</h2>
 <br />
-<p>I created this in browser checkers game as a means to push myself. I am relatively new to coding and I want to push myself to learn as much as possible as quickly as possibe. I have spent 34 years of my life working a career that never really called to me. However coding has always been a passion of mine and it would call me back to dabble with it many times over the years since I was 15 years old.</p>
+<p>I created this in browser checkers game as a means to push myself. I am relatively new to coding and I want to push myself to learn as much as possible as quickly as possibe. I have spent 34 years of my life working a career that never really called to me. However coding has always been a passion of mine and it would call me back to dabble with it many times over the years since I was 15 years old. Honestly when I was first tasked with doing this project I only had an very vague of how I would implement the rules and mechanics of the game and, even less so, how i would enforce those mechanics with code. If you are interested in seeing my initial thoughts and ideas of the project were checkout <a src="psuedo.txt">My Plans</a>.</p>
 <br />
 <h3>GAME RULES</h3>
 <p>
