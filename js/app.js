@@ -68,9 +68,6 @@ function switchTurns() {
 function promoteToKing(piece) {
     if (piece) {
         piece.classList.add('king'); // Add the 'king' class to the piece
-        console.log(`${currentPlayer} promoted to king!`);
-    } else {
-        console.error('Cannot promote to king: piece is null.');
     }
 }
 
