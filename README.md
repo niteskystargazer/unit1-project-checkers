@@ -1,4 +1,4 @@
-<a href="https://niteskystargazer.github.io/unit1-project-checkers/"><img src="./images/checkers.jpg" align="center"></a>
+<a href="https://niteskystargazer.github.io/unit1-project-checkers/" align="center"><img src="./images/checkers.jpg" align="center"></a>
 <h1 align="center">PLAY THE GAME BY CLICKING THE IMAGE ABOVE!</h1>
 <h2 align="center">Created by Bradley Motsinger</h2>
 <br />
