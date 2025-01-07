@@ -1,1 +1,1 @@
-<img src="./images/checker.jpg" align="center">
+<img src="./images/checkers.jpg" align="center">
