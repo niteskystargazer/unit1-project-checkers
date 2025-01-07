@@ -10,7 +10,7 @@
   <ol>
     <li>You can only move pieces diagonally</li>
     <li>All piece can only move one direction</li>
-    <li>The exception are kings that are able to move up or down</li>
+    <li>The exception are kings that are able to move in both directions</li>
     <li>The winner is determined by who has captured more opposing pieces</li>
   </ol>
 </p>
