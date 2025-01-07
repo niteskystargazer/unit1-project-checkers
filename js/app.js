@@ -174,10 +174,9 @@ function checkGameOver() {
 
     // Check if either player has no pieces left
     if (redCount === 0) {
-        alert('Black wins! Red has no pieces left.');
-        endGame();
+        document.getElementById('winner').textContent = ("BLACK WINS!!!");
     } else if (blackCount === 0) {
-        alert('Red wins! Black has no pieces left.');
+        document.getElementById('winner').textContent = ("RED WINS!!!");
         endGame();
     }
 
@@ -210,7 +209,7 @@ function checkGameOver() {
     });
 
     if (!hasValidMove) {
-        alert(`${currentPlayer === 'red' ? 'Black' : 'Red'} wins! ${currentPlayer} has no valid moves.`);
+        document.getElementById('winner').textContent = (`${currentPlayer === 'red' ? 'Black' : 'Red'} wins! ${currentPlayer} has no valid moves.`);
         endGame();
     }
 }
