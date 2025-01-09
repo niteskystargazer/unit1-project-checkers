@@ -1,16 +1,22 @@
-  // Get the button and audio element
-  const playButton = document.getElementById('playButton');
-  const audio = document.getElementById('audio');
+const playButton = document.getElementById('playButton');
+        const stopButton = document.getElementById('stopButton');
+        const audio = document.getElementById('audio');
 
-  // Add click event listener to the button
-  playButton.addEventListener('click', () => {
-      // Play the audio when the button is clicked
-      audio.play().then(() => {
-          console.log('Audio is playing');
-      }).catch((error) => {
-          console.error('Error playing audio:', error);
-      });
-  });
+        // Play the audio
+        playButton.addEventListener('click', () => {
+            audio.play().then(() => {
+                console.log('Audio is playing');
+            }).catch((error) => {
+                console.error('Error playing audio:', error);
+            });
+        });
+
+        // Stop the audio
+        stopButton.addEventListener('click', () => {
+            audio.pause(); // Pause the audio
+            audio.currentTime = 0; // Reset playback to the beginning
+            console.log('Audio is stopped');
+        });
 
 // Select the board element from the DOM
 const board = document.getElementById('board');

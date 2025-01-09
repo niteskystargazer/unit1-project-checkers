@@ -7,16 +7,14 @@
     <title>Checkers</title>
 </head>
 <body>
-     <!-- Button to trigger audio playback -->
-     <button id="playButton">Play Music</button>
-
-     <!-- Audio player, without controls, to be played on button click -->
-     <audio id="audio" preload="auto">
-         <source src="./music/to zanarkand.mp3" type="audio/mp3">
-         Your browser does not support the audio element.
-     </audio>
+    <audio id="audio" preload="auto">
+        <source src="./music/to zanarkand.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
     <h1>Checkers Game</h1>
     <h2 id="turn-indicator">Current Turn: Red</h2>
+    <button id="playButton">Play Music</button>
+    <button id="stopButton">Stop Music</button>
     <h2 id="winner"></h2>
     <div id="board"></div>
     <div id="game-over-text">GAME OVER!</div>
