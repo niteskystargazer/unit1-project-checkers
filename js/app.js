@@ -214,8 +214,18 @@ function checkGameOver() {
     }
 }
 
+
 function endGame() {
-    // Remove event listeners or interactions
+    // Display the burn effect
+    const burnEffect = document.getElementById('burn-effect');
+    burnEffect.style.animation = 'burnAway 5s ease-out forwards';
+
+    // Disable board interactions
     board.removeEventListener('click', handleClick);
     document.getElementById('turn-indicator').textContent = 'Game Over!';
+
+    // Clear the page content after the animation
+    setTimeout(() => {
+        document.body.innerHTML = '<h1>Game Over!</h1>';
+    }, 3000);
 }

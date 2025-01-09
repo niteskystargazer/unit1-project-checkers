@@ -14,6 +14,38 @@ body {
     border: 2px solid black;
 }
 
+/* Burn effect overlay */
+#burn-effect {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, transparent, #ff4500, #000);
+    z-index: 1000;
+    mix-blend-mode: multiply;
+    opacity: 0;
+    pointer-events: none;
+    animation: none;
+}
+
+/* Keyframe animation for burn */
+@keyframes burnAway {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+
 .square {
     width: 50px;
     height: 50px;
