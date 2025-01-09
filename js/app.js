@@ -216,9 +216,13 @@ function checkGameOver() {
 
 
 function endGame() {
-    // Display the burn effect
+    // Display the burn effect animation
     const burnEffect = document.getElementById('burn-effect');
-    burnEffect.style.animation = 'burnAway 5s ease-out forwards';
+    burnEffect.style.animation = 'burnAway 10s ease-out forwards'; // 10s burn effect
+
+    // Display the "GAME OVER!" text
+    const gameOverText = document.getElementById('game-over-text');
+    gameOverText.style.animation = 'textFadeIn 10s ease-out forwards'; // 10s fade-in effect for text
 
     // Disable board interactions
     board.removeEventListener('click', handleClick);
@@ -227,5 +231,5 @@ function endGame() {
     // Clear the page content after the animation
     setTimeout(() => {
         document.body.innerHTML = '<h1>Game Over!</h1>';
-    }, 3000);
+    }, 10000); // Page clears after 10s, after burn animation finishes
 }

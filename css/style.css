@@ -14,34 +14,58 @@ body {
     border: 2px solid black;
 }
 
-/* Burn effect overlay */
+/* Burn effect styling */
 #burn-effect {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: radial-gradient(circle, transparent, #ff4500, #000);
-    z-index: 1000;
-    mix-blend-mode: multiply;
-    opacity: 0;
+    background: radial-gradient(circle, transparent, red, black);
+    z-index: 1000; /* Above the page content */
     pointer-events: none;
-    animation: none;
+    opacity: 0; /* Start with invisible */
 }
 
-/* Keyframe animation for burn */
+/* Keyframe for burn effect */
 @keyframes burnAway {
     0% {
+        opacity: 0; /* Start invisible */
         transform: scale(1);
-        opacity: 0.8;
     }
     50% {
-        transform: scale(1.5);
-        opacity: 0.6;
+        opacity: 1; /* Fade in quickly */
     }
     100% {
-        transform: scale(3);
-        opacity: 0;
+        opacity: 0; /* Fully visible */
+        transform: scale(3); /* Scale up to create burning effect */
+    }
+}
+
+/* Game Over Text Overlay */
+#game-over-text {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    z-index: 2000; /* Above the burn effect */
+    opacity: 0; /* Initially invisible */
+    pointer-events: none; /* Prevent interaction with the overlay */
+}
+
+/* Keyframe for text fade-in */
+@keyframes textFadeIn {
+    0% {
+        opacity: 0; /* Initially hidden */
+    }
+    50% {
+        opacity: 1; /* Fully visible at the start of the burn animation */
+    }
+    100% {
+        opacity: 0; /* Keep visible until the burn animation ends */
     }
 }
 
