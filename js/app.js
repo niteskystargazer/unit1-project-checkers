@@ -1,32 +1,28 @@
 const playButton = document.getElementById('playButton');
-        const stopButton = document.getElementById('stopButton');
-        const audio = document.getElementById('audio');
+const stopButton = document.getElementById('stopButton');
+const audio = document.getElementById('audio');
 
-        // Play the audio
-        playButton.addEventListener('click', () => {
-            audio.play().then(() => {
-                console.log('Audio is playing');
-            }).catch((error) => {
-                console.error('Error playing audio:', error);
-            });
-        });
+// Play the audio
+playButton.addEventListener('click', () => {
+    audio.play().catch((error) => {
+        // Handle the error silently
+    });
+});
 
+// Stop the audio
+stopButton.addEventListener('click', () => {
+    audio.pause(); // Pause the audio
+    audio.currentTime = 0; // Reset playback to the beginning
+});
 
-        // Stop the audio
-        stopButton.addEventListener('click', () => {
-            audio.pause(); // Pause the audio
-            audio.currentTime = 0; // Reset playback to the beginning
-            console.log('Audio is stopped');
-        });
+// Get elements
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
 
-                // Get elements
-                const hamburger = document.getElementById('hamburger');
-                const menu = document.getElementById('menu');
-        
-                // Toggle menu visibility and animation
-                hamburger.addEventListener('click', () => {
-                    hamburger.classList.toggle('active');
-                });
+// Toggle menu visibility and animation
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+});
 
 // Select the board element from the DOM
 const board = document.getElementById('board');
@@ -98,9 +94,6 @@ function switchTurns() {
 function promoteToKing(piece) {
     if (piece) {
         piece.classList.add('king'); // Add the 'king' class to the piece
-        console.log(`${currentPlayer} promoted to king!`);
-    } else {
-        console.error('Cannot promote to king: piece is null.');
     }
 }
 
@@ -187,8 +180,6 @@ board.addEventListener('click', (e) => {
     }
 });
 
-
-
 function checkGameOver() {
     const allPieces = document.querySelectorAll('.piece');
     let redCount = 0;
@@ -204,9 +195,9 @@ function checkGameOver() {
 
     // Check if either player has no pieces left
     if (redCount === 0) {
-        document.getElementById('winner').textContent = ("BLACK WINS!!!");
+        document.getElementById('winner').textContent = "BLACK WINS!!!";
     } else if (blackCount === 0) {
-        document.getElementById('winner').textContent = ("RED WINS!!!");
+        document.getElementById('winner').textContent = "RED WINS!!!";
         endGame();
     }
 
@@ -239,11 +230,10 @@ function checkGameOver() {
     });
 
     if (!hasValidMove) {
-        document.getElementById('winner').textContent = (`${currentPlayer === 'red' ? 'Black' : 'Red'} wins! ${currentPlayer} has no valid moves.`);
+        document.getElementById('winner').textContent = `${currentPlayer === 'red' ? 'Black' : 'Red'} wins! ${currentPlayer} has no valid moves.`;
         endGame();
     }
 }
-
 
 function endGame() {
     // Display the burn effect animation
