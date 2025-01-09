@@ -11,12 +11,22 @@ const playButton = document.getElementById('playButton');
             });
         });
 
+
         // Stop the audio
         stopButton.addEventListener('click', () => {
             audio.pause(); // Pause the audio
             audio.currentTime = 0; // Reset playback to the beginning
             console.log('Audio is stopped');
         });
+
+                // Get elements
+                const hamburger = document.getElementById('hamburger');
+                const menu = document.getElementById('menu');
+        
+                // Toggle menu visibility and animation
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                });
 
 // Select the board element from the DOM
 const board = document.getElementById('board');
